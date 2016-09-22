@@ -1,0 +1,7 @@
+[
+    {"sig":"CSS","desc":"Cascading Style Sheets"},
+    {"sig":"FTP","desc":"File Transfer Protocol"},
+    {"sig":"HTML","desc":"Hypertext Markup Language"},
+    {"sig":"HTTP","desc":"The Hypertext Transfer Protocol"},
+    {"sig":"JS","desc":"JavaScript"},
+    {"sig":"TDD","desc":"Test Driven Development"}   ]
