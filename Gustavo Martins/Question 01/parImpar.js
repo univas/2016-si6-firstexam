@@ -1,10 +1,14 @@
 function getNumber() {
     var number = process.argv[2];
-    showNumber(number);
+    parImpar(number);
 }
 
-function showNumber(number) {
-    console.log(number);
+function parImpar(number) {
+    if(number % 2 == 0){
+        console.log("O número " + number + " é um número par.");
+    }else{
+        console.log("O número " + number + " é um número ímpar.");
+    }
 }
 
 // init
