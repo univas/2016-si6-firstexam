@@ -1,8 +1,18 @@
 const abbreviationDB = require("./abbreviation.json");
-const abbreviation = process.argv[2];
+start();
 
-for (var i = 0; i < abbreviationDB.length; i++){
-    if (abbreviationDB[i].abrev == abbreviation){
-        console.log(abbreviation + " - " + abbreviationDB[i].descr);
+function start(){
+    const abbreviation = process.argv[2];
+    printData(abbreviation, findAbbreviation(abbreviation));
+}
+
+function findAbbreviation(abbreviation) {
+    for (var i = 0; i < abbreviationDB.length; i++){
+        if (abbreviationDB[i].abrev == abbreviation)
+            return abbreviationDB[i];
     }
+}
+
+function printData(abbreviation, object) {
+    console.log(abbreviation + " - " + object.descr);
 }
