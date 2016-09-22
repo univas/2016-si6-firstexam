@@ -1,10 +1,10 @@
 function valorDesconto() {
     
-    var valor = process.arg[2];
-    var porcentagemDesc = process.arg[3];
+    var valor = process.argv[2];
+    var porcentagemDesc = process.argv[3];
     
-    porcentagemDesc = valor * 0.1;
-    console.log("Valor final: " + porcentagemDesc);
+    var total = valor - (valor*porcentagemDesc)/100;
+    console.log("Valor final: " + total);
 }
 
 valorDesconto();
