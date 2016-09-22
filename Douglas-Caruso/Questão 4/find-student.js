@@ -3,7 +3,8 @@ start();
 
 function start(){
     const matricula = process.argv[2];
-    printData(findStudent(matricula));
+    if(findStudent(matricula))
+        printData(findStudent(matricula));
 }
 
 function findStudent(matricula) {
@@ -11,6 +12,8 @@ function findStudent(matricula) {
         if (studentsDB[i].mat == matricula)
             return studentsDB[i];
     }
+    console.log("Matricula não encontrada");
+    return false;
 }
 
 function printData(student) {

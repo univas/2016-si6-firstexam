@@ -3,7 +3,8 @@ start();
 
 function start(){
     const abbreviation = process.argv[2];
-    printData(abbreviation, findAbbreviation(abbreviation));
+    if(findAbbreviation(abbreviation))
+        printData(abbreviation, findAbbreviation(abbreviation));
 }
 
 function findAbbreviation(abbreviation) {
@@ -11,6 +12,8 @@ function findAbbreviation(abbreviation) {
         if (abbreviationDB[i].abrev == abbreviation)
             return abbreviationDB[i];
     }
+    console.log("Abreviação não encontrada");
+    return false;
 }
 
 function printData(abbreviation, object) {

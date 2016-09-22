@@ -3,7 +3,9 @@ showResult();
 function showResult(){
     var price = getPrice();
     var discount = getDiscount();
-    console.log("O valor final com " + discount + "% de desconto é " + calculate(price, discount));
+    var finalPrice = calculate(price, discount);
+    finalPrice = parseFloat(finalPrice.toFixed(2));
+    console.log("O valor final com " + discount + "% de desconto é " + finalPrice);
 }
 
 function calculate(price, discount){
