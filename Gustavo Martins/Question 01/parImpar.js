@@ -1,6 +1,9 @@
 function getNumber() {
     var number = process.argv[2];
-    parImpar(number);
+    if(isNumber(number) && stringToNumber(number))
+        parImpar(number);
+    else
+        console.log("Only valid numbers.");
 }
 
 function parImpar(number) {
@@ -9,6 +12,14 @@ function parImpar(number) {
     }else{
         console.log("O número " + number + " é um número ímpar.");
     }
+}
+
+function isNumber(number) {
+    return !isNaN(number);
+}
+
+function stringToNumber(number) {
+    return parseFloat(number);
 }
 
 // init
