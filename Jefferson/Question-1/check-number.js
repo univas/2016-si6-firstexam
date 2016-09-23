@@ -1,17 +1,11 @@
 displayResult();
 
 function displayResult() {
-    if(! isNaN(getNumber())){
-        var number = getNumber();
-        if(checkNumber() == 0) {
-            console.log("O número " + number + " é um número par!");
-        }
-        else {
-            console.log("O número " + number + " é um número impar! "); 
-        }
+    if(checkNumber(getNumber()) == 0) {
+        console.log("O número " + getNumber() + " é um número par");
     }
     else {
-        console.log("O número é inválido!"); 
+        console.log("O número " + getNumber() + " é um número impar");
     }
 }
 
