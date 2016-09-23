@@ -1,8 +1,8 @@
 [
-    {"abrev": "CSS", "descr": "Cascading Style Sheets"},
-    {"abrev": "FTP", "descr": "File Transfer Protocol"},
-    {"abrev": "HTML", "descr": 	"Hypertext Markup Language"},
-    {"abrev": "HTTP", "descr": 	"The Hypertext Transfer Protocol"},
-    {"abrev": "JS",	"descr": 	"JavaScript"},
-    {"abrev": "TDD", "descr": "Test Driven Development"}
+    {"abrev": "CSS",    "descr": "Cascading Style Sheets"},
+    {"abrev": "FTP",    "descr": "File Transfer Protocol"},
+    {"abrev": "HTML",   "descr": "Hypertext Markup Language"},
+    {"abrev": "HTTP",   "descr": "The Hypertext Transfer Protocol"},
+    {"abrev": "JS",     "descr": "JavaScript"},
+    {"abrev": "TDD",    "descr": "Test Driven Development"}
 ]
