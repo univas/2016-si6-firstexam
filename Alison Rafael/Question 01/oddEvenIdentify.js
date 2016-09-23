@@ -1,4 +1,4 @@
-function OddEvenIdentify(){
+(function OddEvenIdentify(){
     
     (function initialize() {
         displayResult(mountResult(getArgv()));
@@ -9,7 +9,6 @@ function OddEvenIdentify(){
     }
     
     function isANumber(number){
-        console.log(typeof(number));
         return typeof(number) === 'number' ? true : false;
     }
     
@@ -31,13 +30,10 @@ function OddEvenIdentify(){
     }
     
     function displayResult(result){
-        console.log('NUMBERS:\n');
+        console.log('\nNUMBERS:\n');
         result.numbers.forEach(function (oddEven) {
-            console.log('type: ' + oddEven.type + '\tnumber:' + oddEven.number);
+            console.log('\tnumber: ' + oddEven.number + '\ttype: ' + oddEven.type);
         });
     }
     
-}
-
-var oddEvenIdentify = new OddEvenIdentify();
-//oddEvenIdentify.initialize();
+})();
