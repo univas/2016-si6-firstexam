@@ -23,45 +23,57 @@ var students =[
 ];
 
 (function(){
-    var matricula = getMatricula();
-    var wasFound = false;
+    var register = getRegister();
     
-    if(!matricula){
+    if(!register){
         showConsoleMessage("Please enter a valid register number.");
         return;
     }
     
+    var student = findStudentByRegister(register);
     
-    students.forEach(function(s) {
-        if (s.matricula == matricula){
-            showConsoleMessage("Nome: " + s.name);
-            showConsoleMessage("Email: " + s.email);
-            wasFound = true;
-            return;
-        }
-    });
+    if(!student) {
+        showConsoleMessage("There is no student with this number.");
+        return;
+    }
     
-    if(!wasFound) showConsoleMessage("There is no student with this number.");
+    showConsoleMessage("Nome: "+ student.name);
+    showConsoleMessage("Email: "+ student.email);
     
 })();
 
+function findStudentByRegister(register){
+   var wasFound = false;
+   var student = students.filter(function(s) {
+        if (s.matricula == register){
+            wasFound = true;
+            return true;
+        }else{
+            return false;
+        }
+    });
+    
+    if(!wasFound) return false;
+    
+    return student[0];
+}
 
-function getMatricula(){
-    var matricula = process.argv[2];
+function getRegister(){
+    var register = process.argv[2];
     
     
-    if (matricula == null) return false;
-    if(!validateNumber(matricula)) return false;
+    if (register == null) return false;
+    if(!validateNumber(register)) return false;
     
-    return matricula;
+    return register;
 }
 
 function showConsoleMessage(msg){
     console.log(msg);
 }
 
-function validateNumber(number){
-   if(isNaN(number)){
+function validateNumber(register){
+   if(isNaN(register)){
        return false;
    }
    return true;
