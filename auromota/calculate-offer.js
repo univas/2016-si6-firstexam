@@ -1,3 +1,5 @@
+"use strict"
+
 let price = parseFloat(process.argv[2]);
 let discount = process.argv[3];
 let discountValue = parseFloat(discount.replace('%', ''));

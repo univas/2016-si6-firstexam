@@ -1,3 +1,5 @@
+"use strict"
+
 let abbreviation = process.argv[2];
 
 function printAbbreviation(abb) {

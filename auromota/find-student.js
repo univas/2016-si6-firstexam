@@ -1,3 +1,5 @@
+"use strict"
+
 function Student(id, name, email) {
     if (!(this instanceof Student)) {
         return new Student(id, name, email);
