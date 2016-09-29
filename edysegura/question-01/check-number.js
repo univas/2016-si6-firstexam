@@ -10,7 +10,24 @@ function getNumberDescription(number) {
     return isEven(number) ? "even" : "odd";
 }
 
-console.log("3: " + getNumberDescription(3));
-console.log("5: " + getNumberDescription(5));
-console.log("2: " + getNumberDescription(2));
-console.log("6: " + getNumberDescription(6));
+function getNumber() {
+    return process.argv[2];
+}
+
+function isNumber(number) {
+    return !isNaN(number);
+}
+
+(function main() {
+    var number = getNumber();
+    var message = "";
+
+    if (isNumber(number)) {
+        message = "The number " + number + " is " + getNumberDescription(number);
+    }
+    else {
+        message = "Please inform a valid number";
+    }
+
+    console.log(message);
+})();
