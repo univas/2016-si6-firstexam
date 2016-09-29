@@ -1,12 +1,16 @@
 
-function checkNumber(number) {
+function isEven(number) {
     if(number % 2 === 0) {
-        return "even" //par
+        return true;
     }
-    return "odd" //ímpar
+    return false;
 }
 
-console.log("3: " + checkNumber(3));
-console.log("5: " + checkNumber(5));
-console.log("2: " + checkNumber(2));
-console.log("6: " + checkNumber(6));
+function getNumberDescription(number) {
+    return isEven(number) ? "even" : "odd";
+}
+
+console.log("3: " + getNumberDescription(3));
+console.log("5: " + getNumberDescription(5));
+console.log("2: " + getNumberDescription(2));
+console.log("6: " + getNumberDescription(6));
