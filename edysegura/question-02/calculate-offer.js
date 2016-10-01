@@ -21,7 +21,7 @@ function isNumber(number) {
     var message = "Please inform valid values such as 1799.99 15%"
     
     if(isNumber(price) && isNumber(discountPercentage)) {
-        finalPrice = calculateDiscount(price, discountPercentage).toFixed(2);
+        finalPrice = calculateDiscount(price, discountPercentage).toFixed(2)
         message = "The final value with " + discountPercentage + "% is " + finalPrice
     }
      
