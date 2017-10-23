@@ -1,3 +1,5 @@
-# 2016/SI6 - First Exam - NodeJS Basics
+# 2016/SI6 - First Exam - Node.js Basics
 
-First exam of SI6 about NodeJS basics
+First exam of SI6 about Node.js basics
+
+Good luck! ;)
